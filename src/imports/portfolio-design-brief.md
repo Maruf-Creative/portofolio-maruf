@@ -1,0 +1,17 @@
+Website ini dirancang sebagai portofolio profesional yang modern, minimalis, dan clean untuk menampilkan 5–10 proyek desain pilihan. Tampilan dibuat sederhana namun kuat secara visual, tanpa elemen yang berlebihan atau terlalu ramai, sehingga fokus utama tetap pada karya yang ditampilkan. Struktur layout menggunakan sistem grid yang rapi dengan ruang kosong yang cukup agar terasa lega, profesional, dan mudah dinavigasi.
+
+Target utama website ini adalah calon klien, brand, perusahaan, maupun organisasi yang membutuhkan layanan desain dan digital solution. Karena itu, keseluruhan tone visual dibuat terpercaya, matang, dan meyakinkan, namun tetap terasa approachable.
+
+Secara visual, website menggunakan warna dasar netral seperti putih atau off-white dengan tipografi gelap yang kontras dan mudah dibaca. Warna aksen dapat menggunakan hijau lembut atau earth tone untuk memberikan karakter yang elegan tanpa terlihat mencolok. Tipografi dipilih yang modern dan friendly, dengan hierarki yang jelas antara heading, subheading, dan body text agar informasi tersampaikan dengan nyaman.
+
+Halaman utama (Homepage) diawali dengan hero section yang menampilkan headline kuat tentang solusi desain yang ditawarkan, disertai deskripsi singkat berbasis value dan dua tombol call-to-action seperti “View Portfolio” dan “Contact Me”. Di bawahnya terdapat preview proyek unggulan dalam bentuk grid, menampilkan 4–6 karya terbaik dengan efek hover yang sederhana dan clean. Bagian berikutnya berisi ringkasan tentang desainer, keahlian utama, serta indikator kepercayaan seperti jumlah proyek yang telah dikerjakan atau pengalaman kerja. Testimoni dapat ditambahkan untuk memperkuat kredibilitas. Footer berisi tautan media sosial, email, dan informasi legal secara ringkas.
+
+Halaman Portfolio menampilkan seluruh proyek dalam bentuk gallery grid dengan sistem scroll panjang. Setiap kartu proyek memuat thumbnail, judul proyek, badge kategori, deskripsi singkat, dan tombol untuk melihat detail studi kasus. Tersedia fitur filter berdasarkan kategori seperti Social Media Design, Corporate Identity/Branding, Company Profile, UI/UX/Web Design, serta Social Media Management (content plan, reels, KOL campaign). Transisi antar filter dibuat halus dan tidak berlebihan.
+
+Halaman Project Detail dirancang sebagai studi kasus lengkap. Diawali dengan gambar utama berukuran besar, diikuti penjelasan mengenai latar belakang proyek, objektif klien, proses pengerjaan, tools yang digunakan, hingga hasil akhir. Di bagian akhir terdapat call-to-action seperti “Work With Me” untuk mengarahkan calon klien ke tahap berikutnya.
+
+Halaman About berisi foto profesional, cerita singkat tentang latar belakang dan filosofi kerja, serta daftar skill dan tools yang dikuasai. Penyampaian dibuat ringkas namun tetap personal agar membangun koneksi tanpa terasa berlebihan.
+
+Halaman Contact menyediakan formulir sederhana, informasi email, tombol WhatsApp, serta tautan media sosial. Pada tampilan mobile, tersedia sticky CTA button agar pengguna dapat langsung menghubungi dengan mudah.
+
+Website ini sepenuhnya responsif dengan pendekatan mobile-first. Layout menyesuaikan secara optimal di perangkat mobile, tablet, dan desktop, menggunakan sistem multi-column pada layar besar dan grid yang tetap rapi di layar kecil. Komponen UI seperti navbar, kartu proyek, tombol, badge kategori, dan footer dirancang konsisten dan modern, dengan bayangan lembut dan sudut yang sedikit membulat untuk kesan elegan
