@@ -8,7 +8,8 @@ import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export function ContactPage() {
   useDocumentTitle('Contact');
-  
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,10 +17,38 @@ export function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Terima kasih atas pesan Anda! Saya akan segera menghubungi Anda kembali.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/muhammad.maruf.tegar@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          Subject: formData.subject,
+          Message: formData.message,
+          _subject: `Web Portofolio: Pesan baru dari ${formData.name}`,
+          _template: 'box'
+        })
+      });
+
+      if (response.ok) {
+        toast.success('Berhasil! Pesan Anda telah terkirim.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast.error('Gagal mengirim pesan. Silakan coba lagi.');
+      }
+    } catch (error) {
+      toast.error('Terjadi kesalahan jaringan.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -51,9 +80,9 @@ export function ContactPage() {
                     <Mail size={20} />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 dark:text-white">Surel (Email)</div>
-                    <a href="mailto:hello@example.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                      hello@example.com
+                    <div className="font-medium text-gray-900 dark:text-white">Email</div>
+                    <a href="mailto:muhammad.maruf.tegar@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                      muhammad.maruf.tegar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -64,8 +93,8 @@ export function ContactPage() {
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 dark:text-white">WhatsApp</div>
-                    <a href="https://wa.me/6281234567890" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                      +62 812-3456-7890
+                    <a href="https://wa.me/6287768666071" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+                      +62 877-6866-6071
                     </a>
                   </div>
                 </div>
@@ -124,7 +153,7 @@ export function ContactPage() {
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8">
               <h2 className="text-2xl text-gray-900 dark:text-white mb-6">Kirimkan Saya Pesan</h2>
-              
+
               <div className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -188,9 +217,9 @@ export function ContactPage() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600">
-                  Kirim Pesan
-                  <Send className="ml-2" size={18} />
+                <Button type="submit" size="lg" className="w-full bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600" disabled={isSubmitting}>
+                  {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                  {!isSubmitting && <Send className="ml-2" size={18} />}
                 </Button>
               </div>
             </form>
@@ -209,7 +238,7 @@ export function ContactPage() {
             variant="secondary"
             className="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white"
           >
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6287768666071" target="_blank" rel="noopener noreferrer">
               <Phone className="mr-2" size={20} />
               Hubungi via WhatsApp
             </a>

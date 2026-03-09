@@ -51,9 +51,6 @@ export function ProjectDetailPage() {
               <span className="font-medium text-gray-900 dark:text-white">Klien:</span> {project.client}
             </div>
             <div>
-              <span className="font-medium text-gray-900 dark:text-white">Tahun:</span> {project.year}
-            </div>
-            <div>
               <span className="font-medium text-gray-900 dark:text-white">Kategori:</span> {project.categoryLabel}
             </div>
           </div>

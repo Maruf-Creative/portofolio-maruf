@@ -1,5 +1,5 @@
-import aboutImage from '../../assets/fcb05a791d05490cbe90955b51d01622fb0f1d34.png';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import fotoMaruf from '../../assets/foto maruf.webp';
 
 export function AboutPage() {
   useDocumentTitle('About');
@@ -62,7 +62,7 @@ export function AboutPage() {
           <div className="lg:col-span-2">
             <div className="aspect-[3/4] bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl overflow-hidden sticky top-24">
               <img
-                src="images/foto maruf.png"
+                src={fotoMaruf}
                 alt="Muhammad Ma'ruf Tegar Saputra"
                 className="w-full h-full object-cover"
               />
